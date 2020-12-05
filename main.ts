@@ -11,6 +11,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         kitronik_servo_lite.forward()
     }
     if (receivedNumber == 14) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
         basic.showLeds(`
             . # # # .
             . . # . .
@@ -21,6 +22,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         kitronik_servo_lite.backward()
     }
     if (receivedNumber == 12) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Yellow))
         basic.showLeds(`
             . . # . .
             . # . . #
@@ -31,6 +33,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         kitronik_servo_lite.left()
     }
     if (receivedNumber == 13) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Indigo))
         basic.showLeds(`
             . . # . .
             # . . # .
@@ -49,7 +52,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             # # # # #
             # # # # #
             `)
-        kitronik_servo_lite.right()
+        kitronik_servo_lite.stop()
     }
     if (receivedNumber == 16) {
         strip.showRainbow(1, 360)
